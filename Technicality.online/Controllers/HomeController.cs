@@ -68,7 +68,7 @@ namespace Technicality.online.Controllers
             var sb = new System.Text.StringBuilder();
             sb.AppendLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             sb.AppendLine("<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">");
-            sb.AppendLine("<url><loc>https://technicality.online</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online</loc><lastmod>2019-09-21</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Home/Privacy</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Products</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Products/Circlebox</loc><lastmod>2019-09-14</lastmod></url>");
@@ -77,17 +77,17 @@ namespace Technicality.online.Controllers
             sb.AppendLine("<url><loc>https://technicality.online/Products/GoogleAnalyticsWordPressPlugin</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Products/PitchCounter</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Products/AtlasKegScanner</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Showroom</loc><lastmod>2019-09-21</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/AspNet</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/AwsAzureCloud</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/CreditCardProcessing</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/DevOps</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/EmailBlasts</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/GoogleAnalytics</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/Https</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/IntegratedLogins</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/IntegratedApplications</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/Mobile</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Showroom/Notifications</loc><lastmod>2019-09-21</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/Recaptcha</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/SqlServer</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("</urlset>");

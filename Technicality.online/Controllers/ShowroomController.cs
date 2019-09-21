@@ -35,7 +35,9 @@ namespace Technicality.online.Controllers
 
         public IActionResult EmailBlasts()
         {
-            return View();
+            // redirect to Notifications
+            return new RedirectToActionResult("Notifications", "Showroom", null);
+            
         }
 
         public IActionResult GoogleAnalytics()
@@ -59,6 +61,11 @@ namespace Technicality.online.Controllers
         }
 
         public IActionResult Mobile()
+        {
+            return View();
+        }
+
+        public IActionResult Notifications()
         {
             return View();
         }
