@@ -81,7 +81,7 @@ namespace Technicality.online.Controllers
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/AspNet</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/AwsAzureCloud</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/CreditCardProcessing</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/DevOps</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Showroom/DevOps</loc><lastmod>2019-09-21</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/GoogleAnalytics</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/Https</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Showroom/IntegratedLogins</loc><lastmod>2019-09-14</lastmod></url>");
