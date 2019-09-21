@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <img src="~/images/TechnicalityLogo.jpg" class="img-fluid" alt="Technicality" />
+    <p>Technicality is the software development studio of <a href="https://jefftrotman.com">Jeff Trotman</a>.</p>
+    <p>@Html.ActionLink("Products", "Index", "Products") lists Technicality's applications that are available to the public.</p>
+    <p>@Html.ActionLink("Showroom", "Index", "Showroom") will let you see some of the things that Technicality can help you with.</p>
+    <hr />
+    <h2>About ...</h2>
+    <p>Technicality LLC is located in Birmingham, AL.</p>
+    <div id="contact"></div>
+    <p><a href="https://app.acuityscheduling.com/schedule.php?owner=13759965">Schedule an initial consultation</a></p>
+</div>
+<div id="results">
+
+</div>
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm"></script>
+    <script>
+      grecaptcha.ready(function() {
+          grecaptcha.execute('6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm', { action: 'homepage' }).then(function (token) {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("contact").innerHTML = this.responseText;
+                }
+              };
+              xhttp.open("GET", "/Home/VerifyRecaptcha?token=" + token, true);
+              xhttp.send();
+          });
+      });
+    </script>
+}

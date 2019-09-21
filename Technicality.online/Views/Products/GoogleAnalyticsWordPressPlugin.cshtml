@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Google Analytics WordPress Plugin";
+}
+
+<h1>Google Analytics WordPress Plugin</h1>
+
+<p>There are many plugins in the WordPress marketplace that will add the ability to track your site with <a href="https://marketingplatform.google.com/about/analytics/" target="_blank">Google Analytics</a>, but most of the ones that I tried had a lot of other features I didn't want and wanted me to upgrade to their paid version. This is really simple functionality, so I wrote a plugin that just does this one thing.</p>
+<p>
+    If your Google Analytics Tracking ID is UA-XXXXXXXX-1, this is the code that Google needs to be added to your page headers for tracking to occur:
+</p>
+
+<pre><code>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag(‘js’, new Date());
+    gtag(‘config’, ‘UA-XXXXXXXX-1’);
+</code></pre>
+
+<p>This plugin makes this trivial. A field is added to the General Settings page for you to enter your Tracking ID. Activate the plugin, enter your Tracking ID – that’s all you have to do. The code above (with your Tracking ID) will automatically be inserted into the header of each page your readers view.</p>
+<p><a href="https://wordpress.org/plugins/technicality-google-analytics" target="_blank">Download it from the WordPress site here</a> or search for it from the Plugins page in your WordPress site's admin area.</p>
+
+
+

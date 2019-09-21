@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewData["Title"] = "HTTPS";
+}
+
+<h1>HTTPS (SSL)</h1>
+<p>First, here's a nerdy point of information: When you say "SSL", you really mean "HTTPS". (Don't feel bad. I do it too.) SSL stands for "Secure Sockets Layer". It was the security protocol used to encrypt web (HTTP) traffic (but it's been considered unsecure for years. Transport Layer Security (TLS) is its successor (and what we currently use to turn unencrypted HTTP into encrypted HTTPS), but everyone got used to saying "SSL", so we still do.</p>
+<p>Regardless of what you call it - you need it. For years, conventional wisdom said to use SSL if you're dealing with sensitve information (like credit card numbers) but that you didn't need it for blogs, company websites that were purely informational, etc. <a href="https://www.web.com/blog/manage/operations/Google-SSL-changes-2018-how-it-affects-your-business" target="_blank">Google has recently decided that everything needs to be encrypted</a>, so - if you aren't using HTTPS, Google may penalize you in search rankings and Chrome may tell visitors that your website is unsafe.</p>
+<p>Fortunately, this doesn't have to be expensive. Buying an "SSL" certificate costs (at least) ~$70/year, but <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a> generates free certificates that you can use to enable HTTPS. There are tools to make this easy on most Linux distributions. Using Let's Encrypt with Azure App Services is a little tricky to figure out the first time you do it, but it can be done and once you know how to do it - it's pretty straightforward.</p>
+<p>If you'd like to talk about securing your web application, <a href="https://app.acuityscheduling.com/schedule.php?owner=13759965">click here to schedule an initial consultation</a>.</p>

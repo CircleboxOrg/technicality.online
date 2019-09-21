@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "DevOps";
+}
+
+<h1>DevOps</h1>
+<h2>Source Code Control</h2>
+<a href="https://github.com" target="_blank"><img src="~/images/GitHub-Mark-120px-plus.png" class="img-fluid" style="float:right;" /></a>
+<p>There's no reason not to use a source code repository. If a developer has given you source code in a zip file, you need to put it source control. (Similarly, if you're using something other than Git, it's time to move to Git.) <a href="https://github.com" target="_blank">GitHub</a> is the most popular one out there. You can use it for free, if you don't mind the rest of the world having access to your code. If you want private repositories, paid subscriptions start at around $7/month. You can also look at <a href="https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/" target="_blank">Azure DevOps</a> which is free for up to 5 users.</p>
+<hr style="clear:both;" />
+<h2>Continuous Integration/Continuous Development</h2>
+<p>Continuous Integration is the process of making sure that your code will build. (Building is turning source code into code that will execute.) If you have multiple developers working on a project, they need to frequently check in their code to the central repository and it will be "built" from there (eliminating scenarios where "it will build on my development computer but not his or hers"). An automated process can run tests, which improves code quality.</p>
+<p>Continuous Deployment is an automated process to push new code out to production (or a test environment for human QA staff to work with) after it has successfully built, been tested, and approved. <a href="https://www.youtube.com/watch?v=NuYDAs3kNV8" target="_blank">This is a good introductory video</a> for how it works at Azure DevOps.</p>
+<p>Azure DevOps makes it really easy to have your own private NuGet repository. Breaking your complicated software up into pieces and including them via NuGet (as opposed to including source code projects in your main project) makes testing and integrating much easier. Once you build and test that one piece of functionality, you can package it in your private NuGet repository and make it available to all your other projects.</p>
+<p>If you'd like to talk about incorporating DevOps in your organization, <a href="https://app.acuityscheduling.com/schedule.php?owner=13759965">click here to schedule an initial consultation</a>.</p>

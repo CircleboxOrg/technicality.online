@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "AWS Azure Cloud";
+}
+
+<h1>Cloud Hosting</h1>
+<hr />
+<h3>Amazon Web Services (AWS)</h3>
+<a href="https://aws.amazon.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" class="img-fluid" width="154" alt="AWS" style="float:right;padding-left:10px;" /></a>
+<p>
+    I spent about a year helping manage software deployments for a SAAS ("software as a service") company that hosted their application on <a href="https://aws.amazon.com/" target="_blank">AWS</a> so I'm very comfortable with this platform. This application was hosted in <a href="https://aws.amazon.com/ec2/" target="_blank">EC2</a> instances in an <a href="https://aws.amazon.com/ec2/autoscaling/" target="_blank">auto-scaling</a> configuration so that when traffic increased, additional web servers would automatically spin up. These multiple web servers were behind a <a href="https://aws.amazon.com/elasticloadbalancing/" target="_blank">load balancer</a> to evenly distribute the traffic.
+</p>
+<p>
+    There was also an image processing component that used the <a href="https://aws.amazon.com/sqs/" target="_blank">SQS message queueing service</a> to indicate how many images needs to be processed. A separate auto-scaling configuration could "dial up" the number of instances processing images. When a large batch appeared, the auto-scaling might create 100 instances to run for a few minutes to quickly process the backlog. Since cloud services charge by the minute, it's relatively inexpensive to run a lot of instances for a few minutes.
+</p>
+<p>
+    AWS began as more of an IAAS (Infrastructure as a Service) shop, but has moved in the PAAS (Platform as a Service) direction. Their <a href="https://aws.amazon.com/rds/" target="_blank">RDS</a> offering is a good example of this. If you need a SQL Server database in an IAAS environment, you would spin up a virtual machine (VM) and install SQL Server to run on that server (very similar to traditional on-premise, the server just lives somewhere else). RDS offers managed SQL Server (and other databases). What does that mean? The easiest way to begin understanding the difference is - with IAAS, you still have to install Windows Updates on the server. With RDS (PAAS), this is managed for you automatically. That's a drastic over-simplification, but hopefully that lets you start to understand the difference.
+</p>
+<hr />
+<h3>Microsoft Azure</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" class="img-fluid" alt="Azure" style="float:right;padding-left:10px;" />
+
+<p>
+    My personal feeling is that's it's just a little better/easier to run Microsoft technology on <a href="https://azure.microsoft.com" target="_blank">Microsoft Azure</a>, so most of my ASP.Net applications run on Azure. 
+</p>
+<p>
+    I really like <a href="https://azure.microsoft.com/en-us/services/devops/" target="_blank">Azure DevOps</a>. In addition to Git (source control) repositories, it offers work item tracking and is free for up to 5 users. The CI/CD (Continuous Integration/Continuous Deployment) tools are very strong, and you can run pipelines whether you're using Microsoft technology or something else. (I was pleasantly surprised to discover that <a href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools" target="_blank">AWS has tools published in the Azure DevOps marketplace</a> so you can build with Azure and then use AWS CodeDeploy to deploy to AWS auto-scaling groups.) Now that Microsoft has purchased <a href="https://github.com" target="_blank">GitHub</a>, it will be interesting to see how these products evolve. (It's already very easy to use GitHub repos in AzureDevOps pipelines.)
+</p>
+<p>
+    For IT managers, Azure is a easy way to move some of your infrastructure to the cloud. <a href="https://azure.microsoft.com/en-us/services/backup/" target="_blank">Azure Backup</a> is an easy way to do offsite backups of your on-premise Windows Servers. You may not realize, but - if you are using Office 365 (as many organizations are), you already have an Azure account. It's easy to <a href="https://docs.microsoft.com/en-us/office365/enterprise/set-up-directory-synchronization" target="_blank">integrate your on-premise AD domain to Office 365</a> so that your user's can use the same credentials to log into their computer as they use for Office 365.
+</p>
+<hr />
+<p>Both Azure and AWS have "lingo" that may take some getting used to. It's also really helpful to understand networking to be able to properly set up security and redundancy. My experience gained as a multi-location network administrator has really served me well in setting up cloud infrastructure. This is one of the areas I've seen really good developers struggle with as they are trying to move their applications to the cloud. Understanding and using the "availability group" concept of having resources in multiple data centers is very important. </p>
+<ul>
+    <li><a href="https://azure.microsoft.com/en-us/global-infrastructure/regions/" target="_blank">Azure data center locations</a></li>
+    <li><a href="https://aws.amazon.com/about-aws/global-infrastructure/" target="_blank">AWS data center locations</a></li>
+</ul>
+
+<p>If you'd like to talk about moving to Azure or AWS, <a href="https://app.acuityscheduling.com/schedule.php?owner=13759965">click here to schedule an initial consultation</a>.</p>
