@@ -52,23 +52,18 @@ namespace Technicality.online
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseCookiePolicy();
 
             var rootPath = Path.GetFullPath(".");
             var acmeChallengePath =
-                Path.Combine(rootPath, @".well-known\acme-challenge");
-
+                Path.Combine(rootPath, @"wwwroot\.well-known\acme-challenge");
             app.UseDirectoryBrowser(new DirectoryBrowserOptions
             {
                 FileProvider = new PhysicalFileProvider(acmeChallengePath),
                 RequestPath = new PathString("/.well-known/acme-challenge"),
             });
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                ServeUnknownFileTypes = true
-            });
-
-            app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
