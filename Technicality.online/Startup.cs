@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Technicality.online
 {
@@ -50,7 +52,22 @@ namespace Technicality.online
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+
+            var rootPath = Path.GetFullPath(".");
+            var acmeChallengePath =
+                Path.Combine(rootPath, @".well-known\acme-challenge");
+
+            app.UseDirectoryBrowser(new DirectoryBrowserOptions
+            {
+                FileProvider = new PhysicalFileProvider(acmeChallengePath),
+                RequestPath = new PathString("/.well-known/acme-challenge"),
+            });
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                ServeUnknownFileTypes = true
+            });
+
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
