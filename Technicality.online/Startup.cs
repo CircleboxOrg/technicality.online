@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
@@ -51,8 +52,15 @@ namespace Technicality.online
                 app.UseHsts();
             }
 
+            using (StreamReader iisUrlRewriteStreamReader = File.OpenText("IISUrlRewrite.xml"))
+            {
+                var rewriteOptions = new RewriteOptions()
+                    .AddIISUrlRewrite(iisUrlRewriteStreamReader);
+                app.UseRewriter();
+            }
+            
             app.UseHttpsRedirection();
-            app.UseDefaultFiles();
+            app.UseDefaultFiles(); // this is to help with Let's Encrypt certificate challenge script in Azure
             app.UseStaticFiles();
             app.UseCookiePolicy();
 

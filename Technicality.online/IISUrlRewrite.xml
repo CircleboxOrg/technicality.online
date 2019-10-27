@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rewrite>
+  <rules>
+    <rule name="Redirect to technicality.online" stopProcessing="true">
+      <match url="(.*)" />
+      <conditions logicalGrouping="MatchAny" trackAllCaptures="false">
+        <add input="{HTTP_HOST}" pattern="^technicalityllc\.com$" />
+        <add input="{HTTP_HOST}" pattern="^www\.technicalityllc\.com$" />
+        <add input="{HTTP_HOST}" pattern="^technicality\.online$" />
+        <add input="{HTTP_HOST}" pattern="^www\.technicality\.online$" />
+        <add input="{HTTP_HOST}" pattern="^technicality\.azurewebsites\.net$" />
+      </conditions>
+      <action type="Redirect" url="{MapProtocol:{HTTPS}}//technicality.online/{R:1}" />
+    </rule>
+  </rules>
+  <rewriteMaps>
+    <rewriteMap name="MapProtocol">
+      <add key="ON" value="https:" />
+      <add key="OFF" value="http:" />
+    </rewriteMap>
+  </rewriteMaps>
+</rewrite>
