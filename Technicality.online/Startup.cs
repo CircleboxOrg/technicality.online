@@ -56,7 +56,7 @@ namespace Technicality.online
             {
                 var rewriteOptions = new RewriteOptions()
                     .AddIISUrlRewrite(iisUrlRewriteStreamReader);
-                app.UseRewriter();
+                app.UseRewriter(rewriteOptions);
             }
             
             app.UseHttpsRedirection();
