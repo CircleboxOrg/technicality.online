@@ -6,7 +6,6 @@
       <conditions logicalGrouping="MatchAny" trackAllCaptures="false">
         <add input="{HTTP_HOST}" pattern="^technicalityllc\.com$" />
         <add input="{HTTP_HOST}" pattern="^www\.technicalityllc\.com$" />
-        <add input="{HTTP_HOST}" pattern="^technicality\.online$" />
         <add input="{HTTP_HOST}" pattern="^www\.technicality\.online$" />
         <add input="{HTTP_HOST}" pattern="^technicality\.azurewebsites\.net$" />
       </conditions>
