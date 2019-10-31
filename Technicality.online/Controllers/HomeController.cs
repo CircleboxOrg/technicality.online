@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Technicality.online.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         private IConfiguration _configuration;

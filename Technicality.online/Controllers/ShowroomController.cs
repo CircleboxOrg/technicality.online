@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Technicality.online.Controllers
 {
+    [RequireHttps]
     public class ShowroomController : Controller
     {
         public IActionResult Index()
