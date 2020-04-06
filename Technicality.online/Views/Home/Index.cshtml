@@ -2,34 +2,28 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <img src="~/images/TechnicalityLogo.jpg" class="img-fluid" alt="Technicality" />
-    <p>Technicality is the software development studio of <a href="https://jefftrotman.com">Jeff Trotman</a>.</p>
-    <p>@Html.ActionLink("Products", "Index", "Products") lists Technicality's applications that are available to the public.</p>
-    <p>@Html.ActionLink("Showroom", "Index", "Showroom") will let you see some of the things that Technicality can help you with.</p>
-    <hr />
-    <h2>About ...</h2>
-    <p>Technicality LLC is located in Birmingham, AL.</p>
-    <div id="contact"></div>
-    <p><a href="https://app.acuityscheduling.com/schedule.php?owner=13759965">Schedule an initial consultation</a></p>
-</div>
-<div id="results">
+    <div class="jumbotron">
+        <h1 class="display-4">Is Your Technology Project in Trouble?</h1>
+        <p class="lead">Do you have unreasonable requirements or deadlines? You're in the right place!</p>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="~/images/shutterstock_393015229.jpg" alt="Help" />
+        </div>
+        <div class="col">
+            <ul class="list-unstyled">
+                <li>Have you gotten sideways with a technology vendor?</li>
+                <li>Has a key employee quit and left you high and dry?</li>
+                <li>Is your project running long and feels like it won't ever get finished?</li>
+                <li>Do you need a new application built and rolled out yesterday?</li>
+            </ul>
+            <p class="h3">Things may not be as bad as they seem.</p>
+            <p>I've been in the technology business a long time. I'm equally comfortable dealing with your programmer, network admin, controller or CEO. Take a look around the site and if you think I might be able to help you, <a href="https://app.acuityscheduling.com/schedule.php?owner=13759965&appointmentType=3311265">set up an initial consultation</a>.</p>
 
-</div>
-@section Scripts {
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm"></script>
-    <script>
-      grecaptcha.ready(function() {
-          grecaptcha.execute('6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm', { action: 'homepage' }).then(function (token) {
-              var xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                 document.getElementById("contact").innerHTML = this.responseText;
-                }
-              };
-              xhttp.open("GET", "/Home/VerifyRecaptcha?token=" + token, true);
-              xhttp.send();
-          });
-      });
-    </script>
-}
+
+                
+        </div>
+    </div>
+    
+    
+    

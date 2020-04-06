@@ -30,6 +30,11 @@ namespace Technicality.online.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
         public IActionResult VerifyRecaptcha(string token)
         {
             // validate reCAPTCHA result
@@ -61,7 +66,7 @@ namespace Technicality.online.Controllers
             }
             else
             {
-                ViewData.Model = "<a href='./Showroom/Recaptcha'>ReCAPTCHA</a> thinks you are a bot, so email address not displayed.";
+                ViewData.Model = "<a href='./Services/Recaptcha'>ReCAPTCHA</a> thinks you are a bot, so email address not displayed.";
             }
             return PartialView("_VerifiedRecaptcha");
         }
@@ -73,26 +78,26 @@ namespace Technicality.online.Controllers
             sb.AppendLine("<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">");
             sb.AppendLine("<url><loc>https://technicality.online</loc><lastmod>2019-09-21</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Home/Privacy</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products/Circlebox</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products/RcmChannels</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products/BallparkPilgrims</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products/GoogleAnalyticsWordPressPlugin</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products/PitchCounter</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Products/AtlasKegScanner</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom</loc><lastmod>2019-09-21</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/AspNet</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/AwsAzureCloud</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/CreditCardProcessing</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/DevOps</loc><lastmod>2019-09-21</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/GoogleAnalytics</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/Https</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/IntegratedLogins</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/IntegratedApplications</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/Mobile</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/Notifications</loc><lastmod>2019-09-21</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/Recaptcha</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Showroom/SqlServer</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects/Circlebox</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects/RcmChannels</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects/BallparkPilgrims</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects/GoogleAnalyticsWordPressPlugin</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects/PitchCounter</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Projects/AtlasKegScanner</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services</loc><lastmod>2019-09-21</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/AspNet</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/AwsAzureCloud</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/CreditCardProcessing</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/DevOps</loc><lastmod>2019-09-21</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/GoogleAnalytics</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/Https</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/IntegratedLogins</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/IntegratedApplications</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/Mobile</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/Notifications</loc><lastmod>2019-09-21</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/Recaptcha</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Services/SqlServer</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("</urlset>");
 
             return Content(sb.ToString(), "text/xml", System.Text.Encoding.UTF8);
