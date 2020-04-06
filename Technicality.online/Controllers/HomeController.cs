@@ -10,6 +10,7 @@ using System.Net;
 using System.Text;
 using System.IO;
 using Microsoft.Extensions.Configuration;
+using System.Text.Json;
 
 namespace Technicality.online.Controllers
 {
@@ -52,7 +53,7 @@ namespace Technicality.online.Controllers
             }
             var response = (HttpWebResponse)request.GetResponse();
             var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            RecaptchaSiteVerifyResponse deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<RecaptchaSiteVerifyResponse>(responseString);
+            RecaptchaSiteVerifyResponse deserialized = JsonSerializer.Deserialize<RecaptchaSiteVerifyResponse>(responseString);
             if (deserialized.score >= .5)
             {
                 ViewData.Model = "For more information, contact Jeff at <a href='mailto: jeff @jefftrotman.com'>jeff@jefftrotman.com</a>.";
