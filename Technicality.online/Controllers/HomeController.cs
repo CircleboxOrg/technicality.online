@@ -35,6 +35,11 @@ namespace Technicality.online.Controllers
             return View();
         }
 
+        public IActionResult MVPs()
+        {
+            return View();
+        }
+
         public IActionResult VerifyRecaptcha(string token)
         {
             // validate reCAPTCHA result
