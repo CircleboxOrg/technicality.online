@@ -45,6 +45,11 @@ namespace Technicality.online.Controllers
             return View();
         }
 
+        public IActionResult Process()
+        {
+            return View();
+        }
+
         public IActionResult VerifyRecaptcha(string token)
         {
             // validate reCAPTCHA result
@@ -86,7 +91,10 @@ namespace Technicality.online.Controllers
             var sb = new System.Text.StringBuilder();
             sb.AppendLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             sb.AppendLine("<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">");
-            sb.AppendLine("<url><loc>https://technicality.online</loc><lastmod>2019-09-21</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Home/MVPs</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Home/FAQs</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Home/About</loc><lastmod>2020-06-10</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Home/Privacy</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Projects</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Projects/Circlebox</loc><lastmod>2019-09-14</lastmod></url>");
@@ -95,22 +103,27 @@ namespace Technicality.online.Controllers
             sb.AppendLine("<url><loc>https://technicality.online/Projects/GoogleAnalyticsWordPressPlugin</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Projects/PitchCounter</loc><lastmod>2019-09-14</lastmod></url>");
             sb.AppendLine("<url><loc>https://technicality.online/Projects/AtlasKegScanner</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services</loc><lastmod>2019-09-21</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/AspNet</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/AwsAzureCloud</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/CreditCardProcessing</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/DevOps</loc><lastmod>2019-09-21</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/GoogleAnalytics</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/Https</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/IntegratedLogins</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/IntegratedApplications</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/Mobile</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/Notifications</loc><lastmod>2019-09-21</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/Recaptcha</loc><lastmod>2019-09-14</lastmod></url>");
-            sb.AppendLine("<url><loc>https://technicality.online/Services/SqlServer</loc><lastmod>2019-09-14</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/AspNet</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/AwsAzureCloud</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/CreditCardProcessing</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/DevOps</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/GoogleAnalytics</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/Https</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/IntegratedLogins</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/IntegratedApplications</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/Mobile</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/Notifications</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/Recaptcha</loc><lastmod>2020-06-10</lastmod></url>");
+            sb.AppendLine("<url><loc>https://technicality.online/Toolbox/SqlServer</loc><lastmod>2020-06-10</lastmod></url>");
             sb.AppendLine("</urlset>");
 
             return Content(sb.ToString(), "text/xml", System.Text.Encoding.UTF8);
+        }
+
+        public IActionResult Consultation()
+        {
+            return Redirect("https://app.acuityscheduling.com/schedule.php?owner=13759965");
         }
 
         public IActionResult Privacy()

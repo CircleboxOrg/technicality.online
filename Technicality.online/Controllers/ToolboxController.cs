@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Technicality.online.Controllers
 {
     [RequireHttps]
-    public class ServicesController : Controller
+    public class ToolboxController : Controller
     {
         public IActionResult Index()
         {
