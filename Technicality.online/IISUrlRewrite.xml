@@ -4,6 +4,8 @@
     <rule name="Redirect to technicality.online" stopProcessing="true">
       <match url="(.*)" />
       <conditions logicalGrouping="MatchAny" trackAllCaptures="false">
+        <add input="{HTTP_HOST}" pattern="^technicalitymail\.com$" />
+        <add input="{HTTP_HOST}" pattern="^www\.technicalitymail\.com$" />
         <add input="{HTTP_HOST}" pattern="^technicalityllc\.com$" />
         <add input="{HTTP_HOST}" pattern="^www\.technicalityllc\.com$" />
         <add input="{HTTP_HOST}" pattern="^www\.technicality\.online$" />
