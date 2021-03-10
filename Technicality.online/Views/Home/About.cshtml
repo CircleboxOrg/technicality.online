@@ -4,34 +4,45 @@
 }
 
 
-    <div class="text-center">
-        <img src="~/images/TechnicalityLogo.jpg" class="img-fluid" alt="Technicality" />
+<div class="text-center">
+    <img src="~/images/TechnicalityLogo.jpg" class="img-fluid" alt="Technicality" />
 
-        <p>Technicality is the software development studio of <a href="https://jefftrotman.com/about">Jeff Trotman</a> and is located in Birmingham, AL.</p>
+    <p>Technicality is consulting firm in Birmingham, AL specializing in helping clients transition their IT environment to take advantage of the reliability and cost savings provided by cloud computing.</p>
+    <div class="row">
+        <div class="col-10">
+            <div class="row justify-content-center">
+                <div>Technicality is led by Jeff Trotman. Jeff has been in the technology business in Birmingham for over 25 years. His experience as a programmer, network administrator, CTO, and business owner all helps to understand whatever technology issues your business is facing.</div>
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="figure">
+                <img class="img-fluid rounded" src="~/images/Jeff.png" alt="Jeff Trotman" />
+                <figcaption class="figure-caption text-right">Jeff Trotman</figcaption>
 
-        <p>I've been in the technology business a long time. I've been a programmer, network administrator, CTO, and business owner. All of this experience helps me understand, design and build working prototypes quickly.</p>
-
+            </figure>
+        </div>
+    </div>
         <div id="contact"></div>
     </div>
 
-<div class="text-center">
-    <img class="img-fluid" src="~/images/shutterstock_101403709.jpg" />"
-</div>
-@section Scripts {
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm', { action: 'homepage' }).then(function (token) {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("contact").innerHTML = this.responseText;
-                    }
-                };
-                xhttp.open("GET", "/Home/VerifyRecaptcha?token=" + token, true);
-                xhttp.send();
+    <div class="text-center">
+        <img class="img-fluid" src="~/images/shutterstock_101403709.jpg" />"
+    </div>
+    @section Scripts {
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm"></script>
+        <script>
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm', { action: 'homepage' }).then(function (token) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("contact").innerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open("GET", "/Home/VerifyRecaptcha?token=" + token, true);
+                    xhttp.send();
+                });
             });
-        });
-    </script>
-}
+        </script>
+    }
 
