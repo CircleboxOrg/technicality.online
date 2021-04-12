@@ -35,12 +35,17 @@ namespace Technicality.online.Controllers
             return View();
         }
 
-        public IActionResult CloudComputing()
+        public IActionResult Azure()
         {
             return View();
         }
 
         public IActionResult SoftwareDevelopment()
+        {
+            return View();
+        }
+
+        public IActionResult OurApproach()
         {
             return View();
         }
@@ -92,7 +97,7 @@ namespace Technicality.online.Controllers
             RecaptchaSiteVerifyResponse deserialized = JsonSerializer.Deserialize<RecaptchaSiteVerifyResponse>(responseString);
             if (deserialized.score >= .5)
             {
-                ViewData.Model = "For more information, contact Jeff at <a href='mailto:jtrotman@technicalitymail.com'>jtrotman@technicalitymail.com</a>.";
+                ViewData.Model = "For more information, contact Jeff at <a href='mailto:jtrotman@technicality.online'>jtrotman@technicality.online</a>.";
             }
             else
             {

@@ -6,57 +6,58 @@
 
 <div class="text-center">
     <img src="~/images/TechnicalityLogo.jpg" class="img-fluid" alt="Technicality" />
-    </div>
+</div>
 <div class="row align-items-center">
     <div class="col-10">
-        <div class="lead">
-            <div class="lead">Technicality is consulting firm in Birmingham, AL helping clients take advantage of cloud computing.</div>
-        </div>
+        <blockquote class="blockquote">
+            <p>Technicality is boutique technology consulting firm located in Birmingham, AL.</p>
+        </blockquote>
     </div>
     <div class="col-2">
         <img class="img-fluid" src="~/images/mspartnerlogo.png" />
     </div>
 </div>
 <hr />
-    <h3>Leadership</h3>
-    <div class="row">
-        <div class="col-10">
-            <div class="justify-content-center">
-                <div>Technicality is led by <a href="https://www.linkedin.com/in/jefftrotman10/" target="_blank">Jeff Trotman</a>. Jeff has been in the technology business in Birmingham for over 25 years.</div>
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="figure">
-                <img class="img-fluid rounded" src="~/images/Jeff.png" alt="Jeff Trotman" />
-                <figcaption class="figure-caption text-right">Jeff Trotman</figcaption>
-
-            </figure>
+<div class="text-center">
+    <figure class="figure">
+        <img class="img-fluid" src="~/images/shutterstock_101403709.jpg" />
+        <figcaption class="figure-caption">View of downtown from <a href="https://railroadpark.org" target="_blank">Railroad Park</a>, a catalyst for Birmingham's rejuvenation</figcaption>
+    </figure>
+</div>
+<hr />
+<h3>Leadership</h3>
+<div class="row">
+    <div class="col-10">
+        <div class="justify-content-center">
+            <div>Technicality is led by <a href="https://www.linkedin.com/in/jefftrotman10/" target="_blank">Jeff Trotman</a>. Jeff has been in the technology business in Birmingham for over 25 years.</div>
         </div>
     </div>
-    <div id="contact"></div>
-
-    <hr />
-    <div class="text-center">
+    <div class="col-2">
         <figure class="figure">
-            <img class="img-fluid" src="~/images/shutterstock_101403709.jpg" />
-            <figcaption class="figure-caption">View of downtown from <a href="https://railroadpark.org" target="_blank">Railroad Park</a>, a catalyst for Birmingham's rejuvenation</figcaption>
+            <img class="img-fluid rounded" src="~/images/Jeff.png" alt="Jeff Trotman" />
+            <figcaption class="figure-caption text-right">Jeff Trotman</figcaption>
+
         </figure>
     </div>
-    @section Scripts {
-        <script src="https://www.google.com/recaptcha/api.js?render=6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm"></script>
-        <script>
-            grecaptcha.ready(function () {
-                grecaptcha.execute('6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm', { action: 'homepage' }).then(function (token) {
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                            document.getElementById("contact").innerHTML = this.responseText;
-                        }
-                    };
-                    xhttp.open("GET", "/Home/VerifyRecaptcha?token=" + token, true);
-                    xhttp.send();
-                });
+</div>
+<div id="contact"></div>
+
+
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lc0XLgUAAAAADraJQn_J8KSec6hTtYFIcJchkMm', { action: 'homepage' }).then(function (token) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("contact").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "/Home/VerifyRecaptcha?token=" + token, true);
+                xhttp.send();
             });
-        </script>
-    }
+        });
+    </script>
+}
 
