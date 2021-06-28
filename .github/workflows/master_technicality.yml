@@ -30,6 +30,6 @@ jobs:
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'technicality'
-        slot-name: 'production'
+        slot-name: 'staging'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_250c08092f4f4b1e9be6611916ecf837 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
