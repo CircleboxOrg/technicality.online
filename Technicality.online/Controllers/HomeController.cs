@@ -35,7 +35,7 @@ namespace Technicality.online.Controllers
             return View();
         }
 
-        public IActionResult Azure()
+        public IActionResult Cloud()
         {
             return View();
         }
