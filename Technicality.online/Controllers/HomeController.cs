@@ -97,7 +97,7 @@ namespace Technicality.online.Controllers
             RecaptchaSiteVerifyResponse deserialized = JsonSerializer.Deserialize<RecaptchaSiteVerifyResponse>(responseString);
             if (deserialized.score >= .5)
             {
-                ViewData.Model = "For more information, you can schedule a quick conversation <a href='https://outlook.office365.com/owa/calendar/TechnicalityLLC@technicality.online/bookings/'>here</a> or shoot an email to <a href='mailto:jtrotman@technicality.online'>jtrotman@technicality.online</a>.";
+                ViewData.Model = "For more information, you can schedule a quick conversation <a href='https://outlook.office365.com/owa/calendar/TechnicalityLLC@technicality.online/bookings/'>here</a> or shoot an email to <a href='mailto:jeff@jefftrotman.com'>jeff@jefftrotman.com</a>.";
             }
             else
             {
